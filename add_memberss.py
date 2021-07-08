@@ -13,7 +13,7 @@ class addmembersMod(loader.Module):
         if len(event.text.split()) == 2:
             idschannelgroup = event.text.split(" ", maxsplit=1)[1]
             user = [i async for i in event.client.iter_participants(event.to_id.channel_id)]
-            await event.edit(f"<b>Привет</b>")
+            await event.edit(f"<b>Привет {len(user)}</b>")
             for u in user:
                 try:
                     try:
